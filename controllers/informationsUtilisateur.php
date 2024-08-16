@@ -2,7 +2,7 @@
 
 function affichageInfosCompte() {
     // si l'utilisateur est connecté
-    if($_SESSION["is_connected"] == true) {
+    if(isset($_SESSION["is_connected"]) && ($_SESSION["is_connected"] == true)) {
 
         if($_SESSION["is_admin"] == true) {
             $status = "Administrateur";
