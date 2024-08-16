@@ -97,7 +97,7 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
                     <a href="/creation-compte">Mes informations</a>
                     <a href="/connexion">Mes réservations</a>
                     <a href="/">Ma galerie</a>
-                    <a href="/">Déconnexion</a>
+                    <a href="/deconnexion">Déconnexion</a>
                 </div>
             </div>
         <?php
@@ -110,15 +110,7 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
         if(!isset($_SESSION["is_connected"]) || ($_SESSION["is_connected"] != true)) {
             ob_start();
         ?>
-            <div class="btn_nav btn_profil">
-                <span href="">Profil</span>
-                <div class="dropdown_nav">
-                    <a href="/creation-compte">Mes informations</a>
-                    <a href="/connexion">Mes réservations</a>
-                    <a href="/">Ma galerie</a>
-                    <a href="/">Déconnexion</a>
-                </div>
-            </div>
+            <a href="/connexion" class="btn_connexion">Connexion</a>
         <?php
         }
         echo ob_get_clean();

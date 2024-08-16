@@ -60,6 +60,12 @@ switch($path){
         include './controllers/connexion.php';
         break;
 
+    //route pour la deconnexion -> controller deconnexion.php
+    case '/deconnexion' :
+        // controller
+        include './controllers/deconnexion.php';
+        break;
+
     //route par défaut : page 404 -> controller 404.php
     default:
         // view

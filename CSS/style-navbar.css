@@ -195,7 +195,8 @@
         margin-left: 0.25rem;
     }
 
-    .header_nav>.btn_profil {
+    .header_nav>.btn_profil,
+    .header_nav>.btn_connexion {
         margin-left: auto;
     }
 
@@ -205,7 +206,16 @@
 
     .header_nav>.btn_profil>span::before {
         content: "";
-        background-image: url("../Images/icons/icon\ user.png");
+        background-image: url("../Images/icons/icon-user.png");
+        background-size: contain;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 5px;
+    }
+
+    .header_nav>.btn_connexion::before {
+        content: "";
+        background-image: url("../Images/icons/connexion.png");
         background-size: contain;
         width: 2rem;
         height: 2rem;
