@@ -1,0 +1,81 @@
+/* ---------------------------------------- Ensemble du Header */
+header {
+    height: 20vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        height: 10vh;
+    }
+}
+
+
+/* ---------------------------------------- Partie supérieure */
+.header_informations {
+    height: 20%;
+    background-color: var(--bg-header-2);
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.header_informations .icon {
+    height: 50%;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.header_informations p {
+    margin: 0;
+}
+
+@media screen and (max-width: 850px) {
+    .header_informations {
+        display: none;
+    }
+}
+
+/* ---------------------------------------- Partie centrale */
+.header_center {
+    height: 80%;
+    background-color: var(--bg-header-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_center .logo {
+    position: absolute;
+    left: 1%;
+    height: 12vh;
+    border-radius: 10px;
+}
+
+.header_center h1 {
+    font-size: 2em;
+}
+
+#btn_open_navbar {
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .header_center {
+        height: 100%;
+    }
+
+    .header_center .logo{
+        height: 10vh;
+        left: 0;
+    }
+
+    .header_center #btn_open_navbar {
+        display: block;
+        height: 12vh;
+        width: 12vh;    
+    }
+}

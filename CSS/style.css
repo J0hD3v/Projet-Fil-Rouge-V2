@@ -1,0 +1,51 @@
+/* Couleurs */
+
+:root {
+    --bg: #2B2B2B;
+    --bg-header-1: #E4E4E4;
+    --bg-header-2: #8F9BB8;
+    --bg-navbar: #889099;
+    --bg-footer: #8F9BB8;
+    --white: #bebebe;
+    --white-transparent: rgba(0, 0, 0, 0.25);
+    --primary: #32ce9a;
+    --placeholder: #6a666c;
+}
+
+
+
+
+
+/* Suppression bordures */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* Main commun */
+main {
+    min-height: 55vh;
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* Textes */
+
+.text_1 {
+    /* fixer un font-style */
+}
+
+.link,
+.link:visited {
+    color: rgb(0, 100, 255);
+}

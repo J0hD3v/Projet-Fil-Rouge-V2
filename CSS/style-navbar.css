@@ -1,0 +1,272 @@
+/* -------------------------------------------------- */
+/* ------------------- TOUT ECRAN ------------------- */
+/* -------------------------------------------------- */
+
+
+/* -------------------------------------------------- Boutons - Navbar */
+
+/* Liens - Liens visités */
+.header_nav a,
+.header_nav a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+/* Survol des liens */
+.header_nav a:hover,
+.header_nav .btn_nav:hover span,
+.header_nav .btn_nav .dropdown_nav a:hover {
+    background-color: var(--bg-header-1);
+}
+
+/* Appuis sur des liens  */
+.header_nav a:active,
+.header_nav .btn_nav .dropdown_nav a:active {
+    background-color: #eeeeee;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------- */
+/* ------------------- PETIT ECRAN ------------------- */
+/* -------------------------------------------------- */
+
+
+@media screen and (max-width: 850px) {
+
+    /* -------------------------------------------------- Ensemble - Navbar */
+
+    .header_nav {
+        position: fixed;
+        top: 10vh;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+        background-color: #889099; /* #b6b6b6 */
+        z-index: 10;
+
+        display: none;
+    }
+
+    .mobile_nav_display {
+        display: block;
+    }
+
+    /* -------------------------------------------------- Boutons - Navbar */
+
+    /* Boutons navigation */
+    .header_nav>a,
+    .header_nav .btn_nav>span {
+        width: 100%;
+        height: 10vh;
+        background-color: #eeeeee;
+        border: 0.5px solid black;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Dropdowns */
+    .header_nav .btn_nav .dropdown_nav {
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Affichage du dropdown au survol du bouton */
+    .btn_nav:hover .dropdown_nav {
+        display: flex;
+    }
+
+    /* Les boutons dans le Dropdown */
+    .header_nav .btn_nav .dropdown_nav>a {
+        width: 100%;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        border: 0.5px solid black;
+        border-top: none;
+        border-bottom: none;
+        cursor: pointer;
+    }
+
+    /* -------------------------------------------------- Icones - Navbar */
+
+    /* Conteneur icones nav */
+    .header_nav nav {
+        height: inherit;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Icones nav */
+    .header_nav nav .icon {
+        height: 4vh;
+        /* border: 1px solid black; */
+        margin-left: 25px;
+        margin-right: 25px;
+        cursor: pointer;
+    }
+
+        /* -------------------------------------------------- Bouton Display - Navbar */
+
+    /* menu burger */
+    .header_center .menu_burger{
+        position: absolute;
+        right: 0%;
+        align-self: self-end;
+    }
+
+    #btn_open_navbar{
+        background-size: 80%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    .open_navbar{
+        background-image: url("../Images/icons/burger-menu.png");
+    }
+
+    .close_navbar{
+        background-image: url("../Images/icons/cross.png");
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------- */
+/* ------------------- GRAND ECRAN ------------------- */
+/* -------------------------------------------------- */
+
+
+@media screen and (min-width: 850px) {
+
+    /* -------------------------------------------------- Ensemble - Navbar */
+
+    .header_nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        height: 5vh;
+        width: 100%;
+        background-color: var(--bg-navbar);
+        z-index: 10;
+
+        display: flex;
+        align-items: center;
+    }
+
+    /* -------------------------------------------------- Boutons - Navbar */
+
+
+    .header_nav .btn_nav {
+        width: 10vw;
+    }
+
+    .header_nav .btn_nav span::after {
+        content: "▼";
+        margin-top: 0.25rem;
+        margin-left: 0.25rem;
+    }
+
+    .header_nav>.btn_profil {
+        margin-left: auto;
+    }
+
+    .header_nav>.btn_profil>span::after {
+        display: none;
+    }
+
+    .header_nav>.btn_profil>span::before {
+        content: "";
+        background-image: url("../Images/icons/icon\ user.png");
+        background-size: contain;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 5px;
+    }
+
+
+    
+    /* Boutons navigation */
+    .header_nav>a,
+    .header_nav>.btn_nav>span {
+        height: 5vh;
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: larger;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* Dropdowns */
+    .dropdown_nav {
+        position: absolute;
+        flex-direction: column;
+        display: none;
+        width: inherit;
+    }
+
+    /* Affichage du dropdown au survol du bouton */
+    .btn_nav:hover .dropdown_nav {
+        display: flex;
+    }
+
+    /* Les boutons dans le Dropdown */
+    .header_nav .btn_nav .dropdown_nav>a {
+        min-width: 8em;
+        height: 4vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        border-top: none;
+        border-bottom: none;
+        font-size: large;
+        cursor: pointer;
+    }
+
+    /* Arrondi sur le bas du dropdown */
+    .header_nav .btn_nav .dropdown_nav>a:last-of-type {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    
+
+    
+    /* -------------------------------------------------- Bouton Display - Navbar */
+
+    /* menu burger */
+    .header_center .menu_burger {
+        display: none;
+    }
+}

@@ -1,0 +1,111 @@
+main h1 {
+    color: red;
+    margin: 2rem;
+    font-size: 3rem;
+}
+
+.container_form {
+    margin: 2rem 0;
+    padding: 4rem 10vw;
+    max-width: inherit;
+
+    /* optionnel */
+    border: 2px solid var(--white);
+    border-radius: 20px;
+    
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+form>input {
+    margin: 4rem 0 0 0;
+    border: 1.5px solid var(--white);
+    border-radius: 0.25rem;
+    outline: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 1rem;
+    font: 1.1rem futura, helvetica, sans-serif;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--white-transparent);
+    }
+}
+
+
+/* test input */
+
+
+
+.wrapper {
+    margin: 1.5rem 0;
+    width: min(325px, 80vw);
+    display: grid;
+    align-items: center;
+    &>* {
+        grid-column: 1;
+        grid-row: 1;
+        font: 1.1rem futura, helvetica, sans-serif;
+        color: var(--white);
+    }
+    & input {
+        border: 1.5px solid var(--white);
+        border-radius: 0.25rem;
+        outline: none;
+        background-color: transparent;
+        color: var(--white);
+        padding: 1rem;
+        z-index: 0;
+        transition: border-color 0.5s;
+        &:focus {
+            border-color: var(--primary);
+        }
+        &:focus~span,
+        &:not(:placeholder-shown)~span {
+            transform: translateY(-1.8rem) scale(0.85);
+            padding: 0 0.25rem;
+            color: var(--white);
+        }
+    }
+    & span {
+        width: max-content;
+        background-color: var(--bg);
+        margin-left: 1rem;
+        color: var(--placeholder);
+        transition: transform 0.3s;
+    }
+}
+
+/* passe en blanc l'icone d'affichage du mot de passe */
+::-ms-reveal {
+    filter: invert(90%);
+}
+
+/* passe en blanc l'icone de sélection de date */
+::-webkit-calendar-picker-indicator {
+    filter: invert(90%);
+}
+
+/* supprime les flèches de sélection de l'âge */
+.wrapper>input[type=number]::-webkit-outer-spin-button,
+.wrapper>input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* message du statut de l'enregistrement */
+form p:not(:empty) {
+    text-align: center;
+    margin: 2rem 0 0 0;
+    padding: 0.5rem;
+    color: var(--white);
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 0 0 5px 5px red;
+}
