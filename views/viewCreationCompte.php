@@ -45,6 +45,7 @@ function renderCreationCompte($message){
             <input type="submit" name="submit" value="Créer un compte">
             <!--  -->
         </form>
+        <button><a href="/connexion">J'ai déjà un compte</a></button>
     </section>
 
 </main>

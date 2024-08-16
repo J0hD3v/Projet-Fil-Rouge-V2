@@ -24,6 +24,7 @@ function renderConnexion($message){
             <!--  -->
             <input type="submit" name="submit" value="Se connecter">
         </form>
+        <button><a href="/creation-compte">Pas de compte ? Inscrivez-vous !</a></button>
     </section>
 
 </main>

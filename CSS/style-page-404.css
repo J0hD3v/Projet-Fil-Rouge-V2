@@ -1,0 +1,12 @@
+main h1 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 8rem;
+    color: var(--white);
+}
+
+main p {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--white);
+}

@@ -8,6 +8,9 @@ main h1 {
     margin: 2rem 0;
     padding: 4rem 10vw;
     max-width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     /* optionnel */
     border: 2px solid var(--white);
@@ -24,19 +27,50 @@ main form {
 
 /* bouton SUBMIT */
 form>input {
+    width: 100%;
     margin: 4rem 0 0 0;
+    padding: 1rem;
     border: 1.5px solid var(--white);
     border-radius: 0.25rem;
     outline: none;
     background-color: transparent;
     color: var(--white);
-    padding: 1rem;
     font: 1.1rem futura, helvetica, sans-serif;
     cursor: pointer;
+
+    &:hover {
+        /* background-color: var(--white-transparent); */
+        background-image: var(--gradient-effect);
+    }
+}
+
+
+/* bouton vers INSCRIPTION */
+.container_form>button {
+    width: 60%;
+    margin: 2rem 0 0 0;
+    padding: 0.5rem;
+    border: 1px solid var(--placeholder);
+    border-radius: 0.25rem;
+    outline: none;
+    background-color: transparent;
+    color: var(--white);
+    font: 1rem futura, helvetica, sans-serif;
+    cursor: pointer;
+
     &:hover {
         background-color: var(--white-transparent);
     }
+
+    &>a,
+    &>a:visited {
+        color: var(--white);
+        /* text-decoration: none; */
+    }
 }
+
+
+
 
 
 /* test input */
