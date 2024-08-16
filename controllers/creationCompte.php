@@ -53,8 +53,26 @@ function createAccount() {
         return "Une Erreur est survenue, veuillez réessayer.";
     }
 
-    // Message en cas de bon fonctionnement
-    return "Bienvenue $firstname $name !";
+    // Connexion effectuée, récupération des données
+    $data = readUserByEmail($bdd,$email);
+
+    // Connexion + Message en cas de bon fonctionnement
+    $_SESSION["is_connected"] = true;
+    $_SESSION["id_user"] = $data[0]["id_utilisateur"];
+    $_SESSION["name_user"] = $data[0]["nom"];
+    $_SESSION["first_name_user"] = $data[0]["prenom"];
+    $_SESSION["email_user"] = $data[0]["email"];
+    $_SESSION["phone_user"] = $data[0]["telephone"];
+    $_SESSION["dob_user"] = $data[0]["date_naissance"];
+    if($data[0]["id_role_utilisateur"] == 2){
+        $_SESSION["is_admin"] = true;
+    } else {
+        $_SESSION["is_admin"] = false;
+    }
+
+    // Redirection à la page d'accueil
+    echo '<script>window.location.href = "/";</script>';
+    return;
 }
 
 

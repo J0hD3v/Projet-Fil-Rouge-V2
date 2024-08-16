@@ -94,7 +94,7 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
             <div class="btn_nav btn_profil">
                 <span href="">Profil</span>
                 <div class="dropdown_nav">
-                    <a href="/">Mes informations</a>
+                    <a href="/informations-utilisateur">Mes informations</a>
                     <a href="/">Mes réservations</a>
                     <a href="/">Ma galerie</a>
                     <a href="/deconnexion">Déconnexion</a>

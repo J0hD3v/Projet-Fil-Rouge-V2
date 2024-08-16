@@ -56,8 +56,9 @@ function connexion() {
         $_SESSION["is_admin"] = false;
     }
 
+    // Redirection à la page d'accueil
     echo '<script>window.location.href = "/";</script>';
-    return "Bienvenue $_SESSION[first_name_user] $_SESSION[name_user] !";
+    return;
 }
 
 

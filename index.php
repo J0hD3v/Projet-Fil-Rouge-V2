@@ -60,6 +60,14 @@ switch($path){
         include './controllers/connexion.php';
         break;
 
+    //route pour les informations utilisateur -> controller informationsUtilisateur.php
+    case '/informations-utilisateur' :
+        // view
+        include './views/viewInformationsUtilisateur.php';
+        // controller
+        include './controllers/informationsUtilisateur.php';
+        break;
+
     //route pour la deconnexion -> controller deconnexion.php
     case '/deconnexion' :
         // controller
