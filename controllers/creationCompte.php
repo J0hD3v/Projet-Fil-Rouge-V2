@@ -39,7 +39,7 @@ function createAccount() {
     $password = password_hash($password,PASSWORD_BCRYPT);
 
     // Connexion à la BDD
-    $bdd = connect($_ENV['hostBDD'],$_ENV['dbnameBDD'],$_ENV['dbLogin'],$_ENV['dbPassword']);
+    $bdd = connect($_ENV['dbhost'],$_ENV['dbname'],$_ENV['dbLogin'],$_ENV['dbPassword']);
 
     // Vérification des champs uniques
     $data = readUserByEmail($bdd,$email);

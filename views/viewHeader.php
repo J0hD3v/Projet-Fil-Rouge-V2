@@ -86,15 +86,43 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
         <a href="/">Boutique</a>
         <a href="/">Nous contacter</a>
         
-        <div class="btn_nav btn_profil">
-            <span href="">Profil</span>
-            <div class="dropdown_nav">
-                <a href="/creation-compte">Mes informations</a>
-                <a href="/">Mes réservations</a>
-                <a href="/">Ma galerie</a>
-                <a href="/">Déconnexion</a>
+        <!-- si connecté -->
+        <?php
+        if(isset($_SESSION["is_connected"]) && ($_SESSION["is_connected"] == true)) {
+            ob_start();
+        ?>
+            <div class="btn_nav btn_profil">
+                <span href="">Profil</span>
+                <div class="dropdown_nav">
+                    <a href="/creation-compte">Mes informations</a>
+                    <a href="/connexion">Mes réservations</a>
+                    <a href="/">Ma galerie</a>
+                    <a href="/">Déconnexion</a>
+                </div>
             </div>
-        </div>
+        <?php
+        }
+        echo ob_get_clean();
+        ?>
+
+        <!-- si déconnecté -->
+        <?php
+        if(!isset($_SESSION["is_connected"]) || ($_SESSION["is_connected"] != true)) {
+            ob_start();
+        ?>
+            <div class="btn_nav btn_profil">
+                <span href="">Profil</span>
+                <div class="dropdown_nav">
+                    <a href="/creation-compte">Mes informations</a>
+                    <a href="/connexion">Mes réservations</a>
+                    <a href="/">Ma galerie</a>
+                    <a href="/">Déconnexion</a>
+                </div>
+            </div>
+        <?php
+        }
+        echo ob_get_clean();
+        ?>
 
     </nav>
 

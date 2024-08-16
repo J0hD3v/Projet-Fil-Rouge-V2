@@ -40,9 +40,9 @@ function renderCreationCompte($message){
                 <span>Mot de passe</span>
             </section>
             <!--  -->
-            <input type="submit" name="submit" value="Créer un compte">
-            <!--  -->
             <p><?php echo $message ?></p>
+            <!--  -->
+            <input type="submit" name="submit" value="Créer un compte">
             <!--  -->
         </form>
     </section>
