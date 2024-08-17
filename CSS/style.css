@@ -7,11 +7,12 @@
     --bg-navbar: rgb(136, 144, 153);
     --bg-footer: rgb(143, 155, 184);
     --white: rgb(190, 190, 190);
-    --white-transparent: rgba(0, 0, 0, 0.251);
+    --white-transparent: rgba(0, 0, 0, 0.25);
+    --white-pure: rgba(255, 255, 255, 0.9);
     --primary: rgb(50, 206, 154);
     --placeholder: rgb(106, 102, 108);
+    --placeholder-2: rgb(135, 131, 138);
     --gradient-effect: radial-gradient(circle, rgba(44,44,193,0.75) 0%, rgb(18, 23, 37) 100%);
-    
 }
 
 

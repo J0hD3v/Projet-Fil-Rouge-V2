@@ -1,3 +1,83 @@
-li {
-    color: white;
+.container_informations {
+    background-color: var(--white-pure);
+    margin: 5rem;
+    padding: 2rem 5rem;
+    width: 40vw;
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 30px 60px -10px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+h1 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.wrapper {
+    margin: 1.5rem 0;
+    width: min(325px, 80vw);
+    display: grid;
+    align-items: center;
+    &>* {
+        grid-column: 1;
+        grid-row: 1;
+        font: 1rem futura, helvetica, sans-serif;
+        color: var(--white);
+    }
+    & input {
+        border: 1.5px solid var(--white);
+        border-radius: 0.25rem;
+        outline: none;
+        background-color: transparent;
+        color: var(--placeholder);
+        padding: 0.5rem;
+        z-index: 0;
+        transition: border-color 0.5s;
+        &:focus {
+            border-color: var(--primary);
+        }
+        &:focus~span,
+        &:not(:placeholder-shown)~span {
+            transform: translateY(-1.2rem) scale(0.85);
+            padding: 0 0.25rem;
+            color: var(--placeholder-2);
+        }
+    }
+    & span {
+        width: max-content;
+        backdrop-filter: blur(10px);
+        margin-left: 1rem;
+        color: var(--placeholder);
+        transition: transform 0.3s;
+    }
+}
+
+
+/* message du statut de l'enregistrement */
+form p:not(:empty) {
+    display: inline-block;
+    margin: 0 0 -2.5rem 0;
+    padding: 0.5rem;
+    color: var(--placeholder);
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 0 0 5px 5px red;
+}
+
+
+/* bouton Modifier */
+form>input {
+    width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 1rem;
+    border: 1.5px solid var(--white);
+    border-radius: 0.25rem;
+    outline: none;
+    background-color: transparent;
+    color: var(--placeholder);
+    font: 1.1rem futura, helvetica, sans-serif;
+    cursor: pointer;
+
+    &:hover {
+        color: var(--white);
+        background-image: var(--gradient-effect);
+    }
 }
