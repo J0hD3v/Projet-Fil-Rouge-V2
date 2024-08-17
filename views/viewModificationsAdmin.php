@@ -1,5 +1,5 @@
 <?php
-function renderModificationsAdmin($tab_actualites){
+function renderModificationsAdmin($tab_actualites,$message){
     ob_start();
 
     // si l'utilisateur n'est pas administrateur (atteint la page via l'URL)
@@ -56,6 +56,7 @@ function renderModificationsAdmin($tab_actualites){
                         <?php
                     }
                     ?>
+                    <p><?php echo $message ?></p>
                     <!--  -->
                     <input type="submit" name="submit" value="Enregistrer">
                     <input type="reset" name="reset" value="Annuler">
