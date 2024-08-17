@@ -54,7 +54,7 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
             <p>Numero Rue, CP Ville</p>
         </div>
         <div class="header_center">
-            <img src="../Images/logo tempo.png" alt="logo" class="logo btn_home">
+            <img src="../Images/logo-tempo.png" alt="logo" class="logo btn_home">
             <h1>Padel Club - Pau</h1>
             <div class="menu_burger">
                 <button id="btn_open_navbar" class="open_navbar" title="open navbar" type="button"></button>

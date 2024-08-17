@@ -4,10 +4,11 @@ function renderAccueil(){
 ?>
 
 <main>
-    <section class="home_background">
-        <img src="./Images/logo tempo.png" alt="logo" class="logo">
+    <section class="parallax"></section>
+    <section class="logo_background">
         <a href="./Pages/reservation.html" class="btn_reservation">Réserver un terrain</a>
     </section>
+
     <section class="news_bar">
         <!-- carroussel -->
 

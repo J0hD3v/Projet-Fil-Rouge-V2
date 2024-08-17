@@ -187,7 +187,7 @@
 
 
     .header_nav .btn_nav {
-        width: 10vw;
+        min-width: 10vw;
     }
 
     .header_nav .btn_nav span::after {
@@ -235,6 +235,7 @@
         justify-content: center;
         font-size: larger;
         font-weight: bold;
+        text-align: center;
         cursor: pointer;
     }
 
@@ -243,7 +244,7 @@
         position: absolute;
         flex-direction: column;
         display: none;
-        width: inherit;
+        min-width: inherit;
     }
 
     /* Affichage du dropdown au survol du bouton */

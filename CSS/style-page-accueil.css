@@ -1,30 +1,43 @@
 section {
     margin: 0 0 2rem 0;
+    z-index: 1;
 }
 
 
 /* ---------------------------------------- Espace réservation */
 
-/* image background */
-main .home_background {
-    width: 75%;
-    height: 40vh;
+.parallax {
     background-image: url(../Images/background_reservation.jpg);
+    height: 50vh;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    position: sticky;
+    top: 0;
+}
+
+/* logo background */
+main .logo_background {
+    
+    width: 60%;
+    height: 20vh;
+    background-image: url(../Images/logo-tempo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
-/* image logo */
-main .home_background .logo {
-    height: 25vh;
-}
-
 /* bouton "Réserver un terrain" */
-main .home_background .btn_reservation {
+main .logo_background .btn_reservation {
     /* font-size: 1em; */
     padding: 1em;
     background-color: #eeeeee;
@@ -36,11 +49,11 @@ main .home_background .btn_reservation {
     cursor: pointer;
 }
 
-main .home_background .btn_reservation:hover {
+main .logo_background .btn_reservation:hover {
     background-color: #dbdbdb;
 }
 
-main .home_background .btn_reservation:active {
+main .logo_background .btn_reservation:active {
     background-color: #eeeeee;
 }
 
