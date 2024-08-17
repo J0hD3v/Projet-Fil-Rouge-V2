@@ -19,5 +19,23 @@ main>section {
 
     &>form {
         margin: 1rem;
+
+        &>.container_actualites {
+            display: grid;
+            grid-template-columns: 1fr;
+            border: 1px solid black;
+
+            &>* {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            &>article>textarea {
+                resize: none;
+            }
+
+        }
     }
+    
 }

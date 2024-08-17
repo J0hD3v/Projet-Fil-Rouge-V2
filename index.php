@@ -10,6 +10,7 @@ include './env.php';
 include './utils/utils.php';
 // models
 include './models/modelUtilisateurs.php';
+include './models/modelActualites.php';
 // views
 include './views/viewHeader.php';
 include './views/viewFooter.php';

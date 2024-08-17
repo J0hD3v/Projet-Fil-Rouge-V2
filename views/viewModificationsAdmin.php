@@ -1,5 +1,5 @@
 <?php
-function renderModificationsAdmin(){
+function renderModificationsAdmin($tab_actualites){
     ob_start();
 
     // si l'utilisateur n'est pas administrateur (atteint la page via l'URL)
@@ -18,23 +18,50 @@ function renderModificationsAdmin(){
                 <h2>Modifier les articles d'actualités</h2>
 
                 <form action="" method="post">
-                    <!--  -->
-                    <section class="wrapper">
-                        <input type='text' name='email_connecting_user' placeholder=''>
-                        <span>Email</span>
+
+                    <section class="container_actualites">
+
+                        <!--  -->
+                        <section class="col_names">
+                            <h3>Texte</h3>
+                            <h3>Date</h3>
+                            <h3>Visibilité</h3>
+                        </section>
+                        <!--  -->
+                        <?php
+                        if(gettype($tab_actualites) != "string") {
+                            foreach($tab_actualites as $actualite) {
+                                ob_start();
+                            ?>
+                                <article>
+                                    <textarea name='texte_article_<?php echo $actualite["id_actualite"] ?>'><?php echo $actualite["texte"] ?></textarea>
+                                    <input type='datetime-local' name='date_article_<?php echo $actualite["id_actualite"] ?>' value='<?php echo $actualite["date_horaire"] ?>'>
+                                    <input type='checkbox' name='visibilite_article_<?php echo $actualite["id_actualite"] ?>' <?php if($actualite["est_affiche"] == 1){echo 'checked';} ?>>
+                                </article>
+                            <?php
+                            }
+                            echo ob_get_clean();
+                        }
+                        ?>
+
                     </section>
+
+
+                    
                     <!--  -->
-                    <section class="wrapper">
-                        <input type='password' name='password_connecting_user' placeholder=''>
-                        <span>Mot de passe</span>
-                    </section>
+                    <?php
+                    if(gettype($tab_actualites) == "string") {
+                        ?>
+                            <p><?php echo $tab_actualites ?></p>
+                        <?php
+                    }
+                    ?>
                     <!--  -->
-                    <p><?php echo "variable message" ?></p>
-                    <!--  -->
-                    <input type="submit" name="submit" value="Se connecter">
+                    <input type="submit" name="submit" value="Enregistrer">
+                    <input type="reset" name="reset" value="Annuler">
+                    
                 </form>
-                <button><a href="/creation-compte">Pas de compte ? Inscrivez-vous !</a></button>
-                
+
             </section>
 
             <!-- DISPONIBILITE TERRAINS -->
@@ -42,23 +69,7 @@ function renderModificationsAdmin(){
             <section>
                 <h2>Modifier les terrains disponibles - A FAIRE</h2>
 
-                <form action="" method="post">
-                    <!--  -->
-                    <section class="wrapper">
-                        <input type='text' name='email_connecting_user' placeholder=''>
-                        <span>Email</span>
-                    </section>
-                    <!--  -->
-                    <section class="wrapper">
-                        <input type='password' name='password_connecting_user' placeholder=''>
-                        <span>Mot de passe</span>
-                    </section>
-                    <!--  -->
-                    <p><?php echo "variable message" ?></p>
-                    <!--  -->
-                    <input type="submit" name="submit" value="Se connecter">
-                </form>
-                <button><a href="/creation-compte">Pas de compte ? Inscrivez-vous !</a></button>
+                
                 
             </section>
         </main>
