@@ -97,6 +97,18 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
                     <a href="/informations-utilisateur">Mes informations</a>
                     <a href="/">Mes réservations</a>
                     <a href="/">Ma galerie</a>
+                    <!-- special admin -->
+                    <!-- si administrateur -->
+                    <?php
+                    if(isset($_SESSION["is_admin"]) && ($_SESSION["is_admin"] == true)) {
+                        ob_start();
+                    ?>
+                        <a href="/modifications-admin">Modifications Admin</a>
+                    <?php
+                    }
+                    echo ob_get_clean();
+                    ?>
+                    <!-- fin special admin -->
                     <a href="/deconnexion">Déconnexion</a>
                 </div>
             </div>

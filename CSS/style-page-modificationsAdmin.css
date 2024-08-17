@@ -1,0 +1,23 @@
+main h1 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 8rem;
+    color: var(--white);
+}
+
+main>section {
+    background-color: var(--white-pure);
+    margin: 1rem;
+    padding: 2rem 5rem;
+    width: calc(80vw - 10rem);
+    box-shadow: var(--boxshadow-effect);
+
+    &>h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &>form {
+        margin: 1rem;
+    }
+}

@@ -74,6 +74,14 @@ switch($path){
         include './controllers/deconnexion.php';
         break;
 
+    //route pour la page de modifications administrateur -> controller modificationsAdmin.php
+    case '/modifications-admin' :
+        // view
+        include './views/viewModificationsAdmin.php';
+        // controller
+        include './controllers/modificationsAdmin.php';
+        break;
+
     //route par défaut : page 404 -> controller 404.php
     default:
         // view

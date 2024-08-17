@@ -13,6 +13,7 @@
     --placeholder: rgb(106, 102, 108);
     --placeholder-2: rgb(135, 131, 138);
     --gradient-effect: radial-gradient(circle, rgba(44,44,193,0.75) 0%, rgb(18, 23, 37) 100%);
+    --boxshadow-effect: rgba(50, 50, 93, 0.5) 0px 30px 60px -10px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 
