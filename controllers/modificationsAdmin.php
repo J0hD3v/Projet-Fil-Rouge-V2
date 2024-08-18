@@ -1,12 +1,17 @@
 <?php
 
+// MARK: getActualites
 // Function getActualites() définie dans utils.php
 
 
+
+
+// MARK: updateActualites
 // Fonction de modification des articles d'actualité
+
 function updateActualites(){
     // Vérifier l'envoi du formulaire
-    if(!isset($_POST["submit"])){
+    if(!isset($_POST["submit_actualites"])){
         return;
     }
 
@@ -47,10 +52,64 @@ function updateActualites(){
 
 
 
+// MARK: createMedia
+// Fonction d'enregistrement d'un nouveau média
+
+function createMedia(){
+    // Vérifier l'envoi du formulaire
+    if(!isset($_POST["submit_medias"])){
+        return;
+    }
+
+    // Vérifier les champs vides
+    if(!isset($_POST["name_media"]) || empty($_POST["name_media"]) ||
+    !isset($_POST["description_media"]) || empty($_POST["description_media"]) ||
+    !isset($_POST["link_media"]) || empty($_POST["link_media"]) ||
+    !isset($_POST["date_media"]) || empty($_POST["date_media"]) ||
+    !isset($_POST["id_type_media"]) || empty($_POST["id_type_media"]) ||
+    !isset($_POST["id_user_media"]) || empty($_POST["id_user_media"])){
+        return "Veuillez remplir tous les champs.";
+    }
+
+    // Vérifier le format des données
+    // pas nécessaire
+
+    // Nettoyer les données
+    $name = sanitize($_POST["name_media"]);
+    $description = sanitize($_POST["description_media"]);
+    $link = sanitize($_POST["link_media"]);
+    $date = sanitize($_POST["date_media"]);
+    $id_type_media = sanitize($_POST["id_type_media"]);
+    $id_user_media = sanitize($_POST["id_user_media"]);
+
+    // Hasher le mot de passe
+    // pas nécessaire
+
+    // Connexion à la BDD
+    $bdd = connect($_ENV['dbhost'],$_ENV['dbname'],$_ENV['dbLogin'],$_ENV['dbPassword']);
+
+    // Enregistrement du nouveau média
+    $data = addMedia($bdd,$link,$name,$date,$description,$id_type_media,$id_user_media);
+    if($data != true){
+        return "Une Erreur est survenue, veuillez réessayer.";
+    }
+
+    // Redirection à la page d'accueil
+    echo '<script>window.location.href = "/modifications-admin";</script>';
+    return;
+}
+
+
+
+
+
+
+
+
 
 
 echo renderHeader($_ENV['liens_css']['modifications_admin']);
-echo renderModificationsAdmin(getActualites(),updateActualites());
+echo renderModificationsAdmin(getActualites(),updateActualites(),createMedia());
 echo renderFooter();
 
 ?>

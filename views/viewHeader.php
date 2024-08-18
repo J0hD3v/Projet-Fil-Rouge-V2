@@ -62,6 +62,8 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
         </div>
     </header>
 
+    <!-- NAVBAR -->
+
     <nav class="header_nav">
 
         <a href="/">Accueil</a>
@@ -83,10 +85,10 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
             </div>
         </div>
 
-        <a href="/">Boutique</a>
+        <a href="/galerie">Boutique</a>
         <a href="/">Nous contacter</a>
-        
-        <!-- si connecté -->
+
+        <!-- si connecté : onglet Profil -->
         <?php
         if(isset($_SESSION["is_connected"]) && ($_SESSION["is_connected"] == true)) {
             ob_start();
@@ -97,7 +99,6 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
                     <a href="/informations-utilisateur">Mes informations</a>
                     <a href="/">Mes réservations</a>
                     <a href="/">Ma galerie</a>
-                    <!-- special admin -->
                     <!-- si administrateur -->
                     <?php
                     if(isset($_SESSION["is_admin"]) && ($_SESSION["is_admin"] == true)) {
@@ -117,7 +118,7 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
         echo ob_get_clean();
         ?>
 
-        <!-- si déconnecté -->
+        <!-- si déconnecté : onglet Se connecter -->
         <?php
         if(!isset($_SESSION["is_connected"]) || ($_SESSION["is_connected"] != true)) {
             ob_start();

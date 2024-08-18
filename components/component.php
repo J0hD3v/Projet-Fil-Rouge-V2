@@ -1,13 +1,13 @@
 <?php
-function renderNavbar(){
+function renderComponent(){
     ob_start();
-    // DEBUT DU HEADER
+    // DEBUT DU COMPOSANT
 ?>
 
     <!-- le composant -->
 
 <?php
-    // FIN DU HEADER
+    // FIN DU COMPOSANT
     return ob_get_clean();
 }
 ?>

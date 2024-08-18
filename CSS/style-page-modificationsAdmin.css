@@ -36,6 +36,22 @@ main>section {
             }
 
         }
+
+        &>.container_medias {
+            display: grid;
+            grid-template-columns: 1fr;
+            border: 1px solid black;
+
+            &>* {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            &>section>textarea {
+                resize: none;
+            }
+        }
     }
     
 }

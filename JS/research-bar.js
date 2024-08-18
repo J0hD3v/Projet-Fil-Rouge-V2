@@ -1,4 +1,4 @@
-// #region Classe
+/* // #region Classe
 
 class picture {
     constructor (name, link, client, ground, date) {
@@ -155,3 +155,4 @@ research_bar.addEventListener("input", (e) => {
         }
     }
 })
+ */

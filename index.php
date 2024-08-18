@@ -11,6 +11,7 @@ include './utils/utils.php';
 // models
 include './models/modelUtilisateurs.php';
 include './models/modelActualites.php';
+include './models/modelMedias.php';
 // views
 include './views/viewHeader.php';
 include './views/viewFooter.php';

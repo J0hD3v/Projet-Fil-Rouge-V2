@@ -32,6 +32,13 @@
     border: 1px solid black;
     margin: 2vh;
     padding: 2%;
+
+    &>img {
+        width: 80%;
+    }
+    &>p {
+        text-align: center;
+    }
 }
 
 .picture {

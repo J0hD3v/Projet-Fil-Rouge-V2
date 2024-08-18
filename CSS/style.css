@@ -1,4 +1,4 @@
-/* Couleurs */
+/* Root */
 
 :root {
     --bg: #2B2B2B;
@@ -17,9 +17,6 @@
 }
 
 
-
-
-
 /* Suppression bordures */
 
 * {
@@ -28,10 +25,8 @@
 }
 
 
-
-
-
 /* Main commun */
+
 main {
     min-height: 55vh;
     background-color: var(--bg);
@@ -41,10 +36,7 @@ main {
 }
 
 
-
-
 /* Textes */
-
 
 .link,
 .link:visited {
