@@ -1,5 +1,5 @@
 <?php
-function renderAccueil(){
+function renderAccueil($tab_actualites){
     ob_start();
 ?>
 
@@ -17,42 +17,23 @@ function renderAccueil(){
         <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide">
-                    <div class="swiper-caption">
-                        <p>Lundi 1 Avril, ouverture des votes pour le point du mois ! <a href="#" class="link">cliquez ici</a></p>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide">
-                    <div class="swiper-caption">
-                        <p>Lundi 1 Avril, ouverture des votes pour le point du mois ! <a href="#" class="link">cliquez ici</a></p>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide">
-                    <div class="swiper-caption">
-                        <p>Lundi 1 Avril, ouverture des votes pour le point du mois ! <a href="#" class="link">cliquez ici</a></p>
-                    </div>
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide">
-                    <div class="swiper-caption">
-                        <p>Lundi 1 Avril, ouverture des votes pour le point du mois ! <a href="#" class="link">cliquez ici</a></p>
-                    </div>
-                </div>
-                <!-- Slide 5 -->
-                <div class="swiper-slide">
-                    <div class="swiper-caption">
-                        <p>Lundi 1 Avril, ouverture des votes pour le point du mois ! <a href="#" class="link">cliquez ici</a></p>
-                    </div>
-                </div>
-                <!-- Slide 6 -->
-                <div class="swiper-slide">
-                    <div class="swiper-caption">
-                        <p>Lundi 1 Avril, ouverture des votes pour le point du mois ! <a href="#" class="link">cliquez ici</a></p>
-                    </div>
-                </div>
+
+<?php
+                foreach($tab_actualites as $actualite) {
+                    ob_start();
+                    if($actualite["est_affiche"] == 1) {
+?>
+                        <div class="swiper-slide">
+                            <div class="swiper-caption">
+                                <p> <?php echo $actualite["texte"] ?> <a href="#" class="link">cliquez ici</a></p>
+                            </div>
+                        </div>
+<?php
+                    }
+                }
+                echo ob_get_clean();
+?>
+
             </div>
             <!-- Pagination -->
             <div class="swiper-pagination"></div>
