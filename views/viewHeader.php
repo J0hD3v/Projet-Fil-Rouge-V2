@@ -85,7 +85,7 @@ function renderHeader($tab_liens_css=[],$tab_liens_js=[]){
             </div>
         </div>
 
-        <a href="/galerie">Boutique</a>
+        <a href="/galerie">Galerie</a>
         <a href="/">Nous contacter</a>
 
         <!-- si connecté : onglet Profil -->

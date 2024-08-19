@@ -6,7 +6,7 @@ function renderCardMedia($lien,$nom,$description,$date_horaire){
 
     <article class="card_media">
 
-        <img class="image" src="<?php echo $lien; ?>" alt="<?php echo $nom; ?>">
+        <img class="image" src="<?php echo $lien; ?>" alt="<?php echo $nom; ?>" onclick="window.open('<?php echo $lien; ?>', '_blank');">
         <p class="nom_image"><?php echo $nom; ?></p>
         <p class="description_image"><?php echo $description; ?></p>
         <p class="date_image"><?php echo $date_horaire; ?></p>
