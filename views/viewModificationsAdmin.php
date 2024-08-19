@@ -65,7 +65,7 @@ function renderModificationsAdmin($tab_actualites,$message_actualites,$message_m
 
             </section>
 
-            <!-- DISPONIBILITE TERRAINS -->
+            <!-- MEDIAS -->
 
             <section>
                 <h2>Ajouter une image / vidéo - EN COURS</h2>
@@ -75,27 +75,37 @@ function renderModificationsAdmin($tab_actualites,$message_actualites,$message_m
                     <section class="container_medias">
 
                         <!--  -->
-                        <section class="col_names">
+                        <article>
                             <h3>Nom</h3>
-                            <h3>Description</h3>
-                            <h3>Lien du fichier</h3>
-                            <h3>Date</h3>
-                            <h3>Type</h3>
-                            <h3>ID utilisateur (à remplacer par son nom)</h3>
-                        </section>
-                        <!--  -->
-                        
-                        <section>
                             <input type="text" name="name_media">
+                        </article>
+                        <!--  -->
+                        <article>
+                            <h3>Description</h3>
                             <textarea name='description_media'></textarea>
+                        </article>
+                        <!--  -->
+                        <article>
+                            <h3>Lien du fichier</h3>
                             <input type="text" name="link_media">
+                        </article>
+                        <!--  -->
+                        <article>
+                            <h3>Date</h3>
                             <input type='datetime-local' name='date_media'>
+                        </article>
+                        <!--  -->
+                        <article>
+                            <h3>Type</h3>
                             <select name="id_type_media">
-                                <option value=1>Image</option>
-                                <option value=2>Video</option>
-                            </select>
+                            <option value=1>Image</option>
+                            <option value=2>Video</option>
+                        </select>
+                        </article>
+                        <article>
+                            <h3>ID utilisateur (à remplacer par son nom)</h3>
                             <input type="text" name="id_user_media">
-                        </section>
+                        </article>
 
                     </section>
 

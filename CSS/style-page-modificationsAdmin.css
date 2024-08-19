@@ -20,15 +20,27 @@ main>section {
     &>form {
         margin: 1rem;
 
+        /* ACTUALITES */
         &>.container_actualites {
             display: grid;
             grid-template-columns: 1fr;
             border: 1px solid black;
+            padding: 1em;
 
             &>* {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
+                align-items: center;
+                margin: 1rem;
+                
+                @media screen and (max-width: 850px) {
+                    flex-direction: column;
+                    border: 1px solid black;
+                    &>* {
+                        margin: 0.5rem 0;
+                    }
+                }
             }
 
             &>article>textarea {
@@ -37,19 +49,34 @@ main>section {
 
         }
 
+        /* MEDIAS */
         &>.container_medias {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            grid-gap: 10px;
             border: 1px solid black;
+            padding: 1em;
 
-            &>* {
+            &>article {
+                width: 100%;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: space-around;
-            }
 
-            &>section>textarea {
-                resize: none;
+                &>h3 {
+                    text-align: center;
+                }
+
+                &>input[type='text'] {
+                    height: 2rem;
+                    padding: 0 0.5rem;
+                }
+
+                &>textarea {
+                    resize: none;
+                    height: 1rem;
+                    padding: 0.5rem;
+                }
             }
         }
     }
