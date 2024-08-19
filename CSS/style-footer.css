@@ -3,17 +3,24 @@ footer {
     background-color: var(--bg-footer);
     display: grid;
     grid-template-columns: 1fr 4fr 4fr;
+
+    @media screen and (max-width: 850px) {
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
 }
 
 /* Partie Gauche */
 #footer_medias {
-    grid-column: 1;
     height: calc(20vh - 2em);
     padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: 850px) {
+        flex-direction: row;
+    }
 }
 
 #footer_medias .icon {
@@ -23,7 +30,6 @@ footer {
 
 /* Partie Centrale */
 #footer_informations {
-    grid-column: 2;
     height: calc(20vh - 2em);
     padding: 1em;
 }
@@ -35,10 +41,9 @@ footer {
 
 /* Partie Droite */
 #footer_map {
-    grid-column: 3;
     height: calc(20vh - 2em);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 1em;
 }
 
