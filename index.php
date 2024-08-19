@@ -16,7 +16,7 @@ include './models/modelMedias.php';
 include './views/viewHeader.php';
 include './views/viewFooter.php';
 // components
-/* include './components/viewNavbar.php'; */
+include './components/cardMedia.php';
 
 // Récupération des informations de la requête (l'URL) et Isoler le path (la partie après le nom de dommaine dans l'url)
 $url = parse_url($_SERVER['REQUEST_URI']);

@@ -12,13 +12,8 @@ function renderGalerie($tab_medias){
 
         <?php
             foreach($tab_medias as $media) {
-                ob_start();
-        ?>
-                <img src="<?php echo $media['lien']; ?>" alt="<?php echo $media['nom']; ?>">
-                <p><?php echo $media['description_media']; ?></p>
-        <?php
+                echo renderCardMedia($media['lien'],$media['nom'],$media['description_media'],$media['date_horaire']);
             }
-            echo ob_get_clean();
         ?>
 
     </div>
