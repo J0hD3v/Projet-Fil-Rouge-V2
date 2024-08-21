@@ -4,33 +4,24 @@ function renderGalerie($tab_medias){
 ?>
 
 <main>
+    
     <input id="research_bar" placeholder="🔍 Recherche..."></input>
 
     <div id="espace_contenu">
-
-        <!-- PICTURES ARE APPENDED HERE -->
-
+        <!-- PICTURES ARE DISPLAYED HERE -->
         <?php
-            foreach($tab_medias as $media) {
-                echo renderCardMedia($media['lien'],$media['nom'],$media['description_media'],$media['date_horaire']);
+            if(gettype($tab_medias) !== "string") {
+                foreach($tab_medias as $media) {
+                    echo renderCardMedia($media['lien'],$media['nom'],$media['description_media'],$media['date_horaire']);
+                }
+            } else {
+            ?>
+                <p><?php echo $tab_medias ?></p>
+            <?php
             }
         ?>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </main>
 
@@ -38,3 +29,10 @@ function renderGalerie($tab_medias){
     return ob_get_clean();
 }
 ?>
+
+
+
+
+
+
+

@@ -2,10 +2,11 @@
 
 // Fonction de récupération de l'ensemble des médias
 function getMedias(){
+    
     // Connexion à la BDD
     $bdd = connect($_ENV['dbhost'],$_ENV['dbname'],$_ENV['dbLogin'],$_ENV['dbPassword']);
 
-    // Récupération de toutes les actualités enregistrées en BDD
+    // Récupération de tous les médias enregistrés en BDD
     $data = getAllMedias($bdd);
     if($data != true){
         return "Une Erreur est survenue, veuillez réessayer.";
